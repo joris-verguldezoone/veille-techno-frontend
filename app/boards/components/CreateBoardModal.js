@@ -9,14 +9,12 @@ export default function CreateBoardModal({ onClose }) {
   
     useEffect(()=> {
         if(state?.success)
-        onClose(); // fermeture automatique
+        onClose(); // fermeture de lamodal
     }, [onClose])
 
   return (
-    // L'overlay sombre en arrière-plan
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       
-      {/* La boîte de dialogue */}
       <div className="bg-white rounded-xl shadow-xl w-full max-w-md overflow-hidden">
         
         <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
