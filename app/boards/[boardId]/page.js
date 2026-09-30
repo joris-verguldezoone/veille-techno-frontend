@@ -1,9 +1,7 @@
 export default function Board() {
   return (
-    // Conteneur principal : prend toute la hauteur de l'écran, fond grisé
     <div className="h-screen flex flex-col bg-gray-50">
       
-      {/* Header du Tableau */}
       <header className="bg-white border-b px-6 py-4 flex items-center justify-between shrink-0">
         <h1 className="text-xl font-bold text-gray-800">Projet Refonte Site Web</h1>
         <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
@@ -11,19 +9,15 @@ export default function Board() {
         </button>
       </header>
 
-      {/* Zone princip ale du Kanban (défilement horizontal) */}
       <main className="flex-1 overflow-x-auto p-6">
         <div className="flex gap-6 items-start h-full">
           
-          {/* --- COLONNE 1 : À FAIRE --- */}
-          {/* shrink-0 empêche la colonne de s'écraser si on en ajoute beaucoup */}
           <div className="bg-gray-200 rounded-lg w-80 shrink-0 max-h-full flex flex-col">
             <div className="p-3 flex items-center justify-between shrink-0">
               <h2 className="font-semibold text-gray-700">À faire</h2>
               <span className="text-sm text-gray-500 bg-gray-300 px-2 py-0.5 rounded-full">3</span>
             </div>
             
-            {/* Conteneur des cartes (défilement vertical) */}
             <div className="p-3 flex-1 overflow-y-auto space-y-3 custom-scrollbar">
               
               {/* Carte */}
@@ -42,7 +36,6 @@ export default function Board() {
 
             </div>
 
-            {/* Bouton Ajouter en bas de la colonne */}
             <div className="p-3 shrink-0">
               <button className="w-full text-left text-sm text-gray-600 hover:bg-gray-300 p-2 rounded transition-colors">
                 + Ajouter une carte
@@ -50,7 +43,6 @@ export default function Board() {
             </div>
           </div>
 
-          {/* --- COLONNE 2 : EN COURS --- */}
           <div className="bg-gray-200 rounded-lg w-80 shrink-0 max-h-full flex flex-col">
             <div className="p-3 flex items-center justify-between shrink-0">
               <h2 className="font-semibold text-gray-700">En cours</h2>
@@ -71,15 +63,14 @@ export default function Board() {
             </div>
           </div>
 
-          {/* --- COLONNE 3 : TERMINÉ --- */}
           <div className="bg-gray-200 rounded-lg w-80 shrink-0 max-h-full flex flex-col">
             <div className="p-3 flex items-center justify-between shrink-0">
               <h2 className="font-semibold text-gray-700">Terminé</h2>
               <span className="text-sm text-gray-500 bg-gray-300 px-2 py-0.5 rounded-full">0</span>
             </div>
             <div className="p-3 flex-1 overflow-y-auto space-y-3">
-              {/* Zone vide */}
             </div>
+
             <div className="p-3 shrink-0">
               <button className="w-full text-left text-sm text-gray-600 hover:bg-gray-300 p-2 rounded transition-colors">
                 + Ajouter une carte
