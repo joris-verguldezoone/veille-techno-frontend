@@ -19,9 +19,9 @@ export async function loginAction(prevState, formData) {
     }
 
     const data = await res.json();
-    const token = data.token; 
+    const token = data.accessToken; 
 
-    const cookieStore = await cookies(); // A confirmer
+    const cookieStore = await cookies(); 
     cookieStore.set("jwt", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
@@ -63,6 +63,5 @@ export async function registerAction(prevState, formData) {
     return { error: "Impossible de joindre le serveur Quarkus." };
   }
 
-  redirect("/auth/login");
 }
 
